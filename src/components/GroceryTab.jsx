@@ -1,0 +1,83 @@
+/**
+ * GroceryTab — Tab 4: rau củ & đồ khô (non-protein), gom theo category.
+ */
+import { CATEGORIES } from '../lib/config.js';
+import { aggregateIngredients, isProtein } from '../lib/calc.js';
+import { IngredientDetails } from './IngredientDetails.jsx';
+
+const displayQty = (name, total, unit) =>
+  name.toLowerCase().includes('cơm trắng')
+    ? `${total}g ≈ ${(total / 1000 * 1.3).toFixed(1)}kg gạo`
+    : `${total}${unit}`;
+
+export function GroceryTab({ data, days }) {
+  const agg = aggregateIngredients(data, days, (name) => !isProtein(name));
+  const matchedKeywords = Object.values(CATEGORIES).flatMap((c) => c.keywords);
+
+  // các category có ít nhất 1 dòng
+  const cats = Object.entries(CATEGORIES)
+    .map(([catName, { emoji, keywords }]) => ({
+      catName,
+      emoji,
+      rows: Object.entries(agg).filter(([name]) =>
+        keywords.some((k) => name.toLowerCase().includes(k))),
+    }))
+    .filter((c) => c.rows.length > 0);
+
+  // nguyên liệu non-protein chưa thuộc category nào
+  const uncategorized = Object.entries(agg).filter(([name]) =>
+    !matchedKeywords.some((k) => name.toLowerCase().includes(k)));
+
+  return (
+    <>
+      {cats.map(({ catName, emoji, rows }) => (
+        <div className="sec" key={catName}>
+          <div className="sec-hd">
+            <span className="sec-icon">{emoji}</span>
+            <span className="sec-title">{catName}</span>
+            <span className="sec-badge">cả tuần {days[0]}→{days[days.length - 1]}</span>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Nguyên liệu</th><th>Tổng</th><th>Chi tiết dùng</th></tr>
+            </thead>
+            <tbody>
+              {rows.map(([name, d]) => (
+                <tr key={name}>
+                  <td><strong>{name}</strong></td>
+                  <td className="qty">{displayQty(name, d.total, d.unit)}</td>
+                  <td><IngredientDetails details={d.details} unit={d.unit} withNote /></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ))}
+
+      {uncategorized.length > 0 && (
+        <div className="sec">
+          <div className="sec-hd">
+            <span className="sec-icon">📦</span><span className="sec-title">Khác</span>
+          </div>
+          <table>
+            <thead><tr><th>Tên</th><th>Tổng</th><th>Chi tiết</th></tr></thead>
+            <tbody>
+              {uncategorized.map(([name, d]) => (
+                <tr key={name}>
+                  <td><strong>{name}</strong></td>
+                  <td className="qty">{d.total}{d.unit}</td>
+                  <td className="sm">các bữa</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      <div className="notebox">
+        <span>💡</span>
+        <div>Check sẵn ở nhà: <strong>tỏi, hành khô, muối, tiêu</strong>. Rau lá để ngăn mát 3–4 ngày · Rau củ cứng để cả tuần.</div>
+      </div>
+    </>
+  );
+}

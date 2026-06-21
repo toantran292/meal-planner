@@ -98,6 +98,8 @@ body {
 .container { max-width: 1100px; margin: 0 auto; }
 .panel { display: none; flex-direction: column; gap: 20px; }
 .panel.active { display: flex; }
+/* các section trong panel-content cũng cách đều nhau */
+[id$="-content"] { display: flex; flex-direction: column; gap: 20px; }
 
 /* ═══════════════════════════════════════
    PANEL HEADER
@@ -175,6 +177,7 @@ td {
   font-size: .85rem;
   vertical-align: middle;
   border-bottom: 1px solid var(--border);
+  overflow-wrap: anywhere;
 }
 tr:last-child td { border-bottom: none; }
 tr:hover td { background: #FAFAF8; }
@@ -225,6 +228,8 @@ tr:hover td { background: #FAFAF8; }
 .day-col {
   border-right: 1px solid var(--border);
   padding: 14px;
+  min-width: 0;          /* cho phép cột 1fr co lại, tránh tràn ngang */
+  overflow-wrap: anywhere;
 }
 .day-col:last-child { border-right: none; }
 .day-label {
@@ -259,7 +264,9 @@ tr:hover td { background: #FAFAF8; }
   cursor: default;
   transition: filter .15s;
 }
-.meal-card:hover { filter: brightness(.97); }
+/* z-index nâng cao để tooltip không bị card phía sau đè lên
+   (filter tạo stacking context, nên phải nâng cả card) */
+.meal-card:hover { filter: brightness(.97); z-index: 50; }
 .meal-card.m { background: var(--malel);   border-color: var(--male); }
 .meal-card.f { background: var(--femalel); border-color: var(--female); }
 
@@ -297,7 +304,10 @@ tr:hover td { background: #FAFAF8; }
   padding: 12px 14px;
   pointer-events: none;
 }
-.meal-card:hover .tooltip { display: block; }
+.meal-card:hover .tooltip,
+.meal-card.open .tooltip { display: block; }
+/* tap mở tooltip trên mobile → cũng cần nâng z-index */
+.meal-card.open { z-index: 50; }
 
 /* keep right-edge tooltips inside viewport */
 .meal-card:nth-child(n) .tooltip { left: 0; right: auto; }
@@ -375,10 +385,51 @@ tr:hover td { background: #FAFAF8; }
 
 /* ═══════════════════════════════════════
    RESPONSIVE
+   Desktop (MacBook) ≥ 980px : lịch ăn 3 cột
+   Tablet 600–980px          : lịch ăn 2 cột
+   Phone (iPhone) < 600px    : 1 cột, bảng dạng thẻ xếp dọc
 ═══════════════════════════════════════ */
-@media (max-width: 700px) {
+
+/* Tablet — lịch ăn 2 cột */
+@media (max-width: 980px) {
+  .week-grid { grid-template-columns: repeat(2, 1fr); }
+  /* cột thứ 2 không cần viền phải */
+  .day-col:nth-child(2n) { border-right: none; }
+  /* hàng đầu có viền dưới ngăn cách với hàng sau */
+  .day-col:nth-child(-n + 2) { border-bottom: 1px solid var(--border); }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+  body { padding: 18px 12px 48px; }
+
+  .hdr { margin-bottom: 18px; }
+  .hdr-title { font-size: 1.45rem; }
+  .hdr-sub { font-size: .78rem; }
+
+  .tabs { margin-bottom: 16px; gap: 5px; }
+  .tab { padding: 8px 13px; font-size: .78rem; }
+
+  .phdr { padding: 14px 16px; }
+  .phdr h2 { font-size: 1.1rem; }
+  .phdr p { font-size: .74rem; }
+
+  /* lịch ăn 1 cột */
   .week-grid { grid-template-columns: 1fr; }
   .day-col { border-right: none; border-bottom: 1px solid var(--border); }
-  th:last-child, td:last-child { display: none; }
-  .tooltip { min-width: 220px; }
+  .day-col:last-child { border-bottom: none; }
+
+  /* Bảng → thẻ xếp dọc: tên → tổng → chi tiết (giữ đủ thông tin) */
+  table, tbody, tr, td { display: block; width: 100%; }
+  thead { display: none; }
+  tr { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+  tr:last-child { border-bottom: none; }
+  tr:hover td { background: transparent; }
+  td { border: none; padding: 0; }
+  td:first-child strong { font-size: .95rem; }
+  td.qty { font-size: .95rem; margin: 2px 0 7px; color: var(--text); }
+  td .tag { margin-bottom: 2px; }
+
+  /* tooltip vừa khít màn hình điện thoại */
+  .tooltip { min-width: 0; max-width: calc(100vw - 48px); }
 }

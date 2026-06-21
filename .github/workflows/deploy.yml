@@ -5,26 +5,33 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Cho phép workflow ghi vào GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Chỉ chạy 1 deploy tại 1 thời điểm, không hủy deploy đang chạy
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build (Vite)
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -32,9 +39,15 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Site là static thuần, deploy nguyên thư mục gốc
-          path: .
+          path: ./dist
 
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
