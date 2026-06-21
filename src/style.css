@@ -158,6 +158,51 @@ body {
 }
 
 /* ═══════════════════════════════════════
+   SECTION TOOLBAR — chọn ngày đi chợ
+═══════════════════════════════════════ */
+.sec-toolbar {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  background: #FCFBF9;
+}
+.day-picker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.day-picker-label {
+  font-size: .76rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.day-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.day-chip {
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: .78rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  background: var(--surface);
+  color: var(--muted);
+  border: 1.5px solid var(--border);
+  transition: all .15s;
+}
+.day-chip:hover { border-color: var(--muted); color: var(--text); }
+.day-chip.on {
+  background: var(--text);
+  color: #fff;
+  border-color: var(--text);
+}
+.empty-state {
+  padding: 28px 18px;
+  text-align: center;
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+/* ═══════════════════════════════════════
    TABLE
 ═══════════════════════════════════════ */
 table { width: 100%; border-collapse: collapse; }
