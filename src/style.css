@@ -201,6 +201,14 @@ body {
   font-size: .85rem;
   color: var(--muted);
 }
+/* bộ chọn ngày đứng riêng (đầu tab Rau củ) */
+.picker-bar {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px 18px;
+}
 
 /* ═══════════════════════════════════════
    TABLE
