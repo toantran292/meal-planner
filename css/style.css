@@ -130,7 +130,8 @@ body {
   background: var(--surface);
   border-radius: var(--radius);
   border: 1.5px solid var(--border);
-  overflow: hidden;
+  /* không dùng overflow:hidden để tooltip không bị clip;
+     bo góc trên chuyển sang .sec-hd */
   box-shadow: var(--shadow);
 }
 .sec-hd {
@@ -140,6 +141,7 @@ body {
   gap: 8px;
   border-bottom: 1.5px solid var(--border);
   background: var(--surface2);
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 .sec-icon  { font-size: 1.1rem; }
 .sec-title { font-weight: 700; font-size: .9rem; }
