@@ -1,0 +1,438 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "source": "Bảng thực đơn tuần - Nữ macro chính xác từ bảng gốc, Nam ước tính",
+    "unit": "gram (g) hoặc ml",
+    "days": ["T2","T3","T4","T5","T6","T7"],
+    "slots": ["sang","trua","toi"]
+  },
+
+  "meals": {
+    "nu_sang_s1_oat_banana_cacao": {
+      "id": "nu_sang_s1_oat_banana_cacao",
+      "name": "Bánh Oat-Banana Cacao",
+      "gender": "nu",
+      "slot": "sang",
+      "macro": { "P": 11.8, "C": 36.2, "F": 8.2, "kcal": 251 },
+      "ingredients": [
+        { "name": "Chuối",               "qty": 80,  "unit": "g"  },
+        { "name": "Trứng gà",            "qty": 80,  "unit": "g",  "note": "1 quả" },
+        { "name": "Sữa tươi 0 đường",   "qty": 30,  "unit": "ml" },
+        { "name": "Yến mạch",            "qty": 20,  "unit": "g"  },
+        { "name": "Bột cacao nguyên chất","qty": 5,  "unit": "g"  }
+      ]
+    },
+
+    "nu_sang_s2_sua_chua_yen_mach": {
+      "id": "nu_sang_s2_sua_chua_yen_mach",
+      "name": "Bánh sữa chua nướng yến mạch",
+      "gender": "nu",
+      "slot": "sang",
+      "macro": { "P": 17.4, "C": 19.6, "F": 12.8, "kcal": 267 },
+      "ingredients": [
+        { "name": "Sữa chua ít đường",  "qty": 100, "unit": "g",  "note": "1 hủ" },
+        { "name": "Trứng gà",           "qty": 100, "unit": "g",  "note": "2 quả" },
+        { "name": "Bột yến mạch",       "qty": 10,  "unit": "g"  }
+      ]
+    },
+
+    "nu_sang_s3_banh_mi_matcha": {
+      "id": "nu_sang_s3_banh_mi_matcha",
+      "name": "Bánh mì nguyên cám bơ đậu phộng + Matcha Latte",
+      "gender": "nu",
+      "slot": "sang",
+      "macro": { "P": 7.7, "C": 18.6, "F": 7.6, "kcal": 171 },
+      "ingredients": [
+        { "name": "Bánh mì nguyên cám",       "qty": 30,  "unit": "g",  "note": "1 lát" },
+        { "name": "Bơ đậu phộng",             "qty": 10,  "unit": "g"  },
+        { "name": "Sữa tươi không đường",     "qty": 60,  "unit": "ml" },
+        { "name": "Bột matcha nguyên chất",   "qty": 2,   "unit": "g"  }
+      ]
+    },
+
+    "nu_trua_t1_bo_phi_le_xao": {
+      "id": "nu_trua_t1_bo_phi_le_xao",
+      "name": "Bò phi-lê xào đậu que & Yến mạch",
+      "gender": "nu",
+      "slot": "trua",
+      "macro": { "P": 56.0, "C": 27.7, "F": 18.0, "kcal": 505 },
+      "ingredients": [
+        { "name": "Thịt bò thăn nội",  "qty": 200, "unit": "g"  },
+        { "name": "Trứng gà",          "qty": 50,  "unit": "g",  "note": "1 quả" },
+        { "name": "Đậu que",           "qty": 100, "unit": "g"  },
+        { "name": "Yến mạch",          "qty": 30,  "unit": "g"  },
+        { "name": "Dầu ăn",            "qty": 5,   "unit": "ml" }
+      ]
+    },
+
+    "nu_trua_t2_bo_xao_thap_cam": {
+      "id": "nu_trua_t2_bo_xao_thap_cam",
+      "name": "Bò xào rau củ thập cẩm",
+      "gender": "nu",
+      "slot": "trua",
+      "macro": { "P": 54.2, "C": 16.4, "F": 16.5, "kcal": 436 },
+      "ingredients": [
+        { "name": "Thịt bò thăn nội",      "qty": 200, "unit": "g"  },
+        { "name": "Trứng gà",              "qty": 50,  "unit": "g",  "note": "1 quả" },
+        { "name": "Bông cải trắng",        "qty": 100, "unit": "g"  },
+        { "name": "Rau củ hỗn hợp",       "qty": 80,  "unit": "g"  },
+        { "name": "Dầu ăn",               "qty": 5,   "unit": "ml" }
+      ]
+    },
+
+    "nu_trua_t3_ca_hoi_com_lua": {
+      "id": "nu_trua_t3_ca_hoi_com_lua",
+      "name": "Cơm lứa Cá hồi nướng phô mai bơ",
+      "gender": "nu",
+      "slot": "trua",
+      "macro": { "P": 56.2, "C": 28.5, "F": 43.7, "kcal": 738 },
+      "ingredients": [
+        { "name": "Cá hồi tươi",       "qty": 200, "unit": "g"  },
+        { "name": "Cơm gạo lứt",       "qty": 100, "unit": "g"  },
+        { "name": "Bơ quả (avocado)",  "qty": 40,  "unit": "g"  },
+        { "name": "Phô mai lát",       "qty": 40,  "unit": "g"  },
+        { "name": "Rong biển Nori",    "qty": 2,   "unit": "g"  }
+      ]
+    },
+
+    "nu_trua_t4_cari_ga": {
+      "id": "nu_trua_t4_cari_ga",
+      "name": "Cari gà phi-lê khoai tây & Cơm trắng",
+      "gender": "nu",
+      "slot": "trua",
+      "macro": { "P": 65.3, "C": 54.8, "F": 12.7, "kcal": 609 },
+      "ingredients": [
+        { "name": "Má đùi gà không da xương", "qty": 300, "unit": "g"  },
+        { "name": "Nước dừa tươi",            "qty": 100, "unit": "ml" },
+        { "name": "Cà rốt",                   "qty": 40,  "unit": "g"  },
+        { "name": "Khoai tây",                "qty": 60,  "unit": "g"  },
+        { "name": "Hành tây",                 "qty": 30,  "unit": "g"  },
+        { "name": "Cơm trắng",               "qty": 120, "unit": "g"  }
+      ]
+    },
+
+    "nu_trua_t5_ga_khom_banh_mi": {
+      "id": "nu_trua_t5_ga_khom_banh_mi",
+      "name": "Má đùi gà xào khóm & Bánh mì nguyên cám",
+      "gender": "nu",
+      "slot": "trua",
+      "macro": { "P": 55.6, "C": 36.5, "F": 16.1, "kcal": 521 },
+      "ingredients": [
+        { "name": "Má đùi gà không da xương", "qty": 250, "unit": "g"  },
+        { "name": "Khóm (dứa)",               "qty": 80,  "unit": "g"  },
+        { "name": "Bánh mì nguyên cám",       "qty": 60,  "unit": "g",  "note": "2 lát" },
+        { "name": "Dầu ăn",                   "qty": 5,   "unit": "ml" }
+      ]
+    },
+
+    "nu_toi_d1_ga_mat_ong": {
+      "id": "nu_toi_d1_ga_mat_ong",
+      "name": "Ức gà sốt mật ong & Rau củ luộc",
+      "gender": "nu",
+      "slot": "toi",
+      "macro": { "P": 66.9, "C": 29.6, "F": 6.4, "kcal": 472 },
+      "ingredients": [
+        { "name": "Ức gà phi-lê tươi",  "qty": 200, "unit": "g"  },
+        { "name": "Mật ong",            "qty": 7,   "unit": "g",  "note": "quét mặt" },
+        { "name": "Đậu bắp",            "qty": 50,  "unit": "g"  },
+        { "name": "Bắp (ngô)",          "qty": 60,  "unit": "g"  },
+        { "name": "Bông cải xanh",      "qty": 50,  "unit": "g"  },
+        { "name": "Bí đỏ",              "qty": 50,  "unit": "g"  }
+      ]
+    },
+
+    "nu_toi_d2_bo_ham_nuoc_dua": {
+      "id": "nu_toi_d2_bo_ham_nuoc_dua",
+      "name": "Bò hầm rau củ nước dừa",
+      "gender": "nu",
+      "slot": "toi",
+      "macro": { "P": 35.7, "C": 27.2, "F": 5.0, "kcal": 302 },
+      "ingredients": [
+        { "name": "Bắp bò / gân",      "qty": 150, "unit": "g"  },
+        { "name": "Nước dừa tươi",     "qty": 150, "unit": "ml" },
+        { "name": "Khoai tây",         "qty": 80,  "unit": "g"  },
+        { "name": "Cà rốt",            "qty": 50,  "unit": "g"  },
+        { "name": "Hành tây",          "qty": 30,  "unit": "g"  }
+      ]
+    },
+
+    "nu_toi_d3_ga_takoyaki": {
+      "id": "nu_toi_d3_ga_takoyaki",
+      "name": "Má đùi gà sốt Takoyaki áp chảo & Bắp cải",
+      "gender": "nu",
+      "slot": "toi",
+      "macro": { "P": 62.4, "C": 17.2, "F": 12.3, "kcal": 435 },
+      "ingredients": [
+        { "name": "Má đùi gà không da xương", "qty": 300, "unit": "g"  },
+        { "name": "Sốt Takoyaki",             "qty": 30,  "unit": "g"  },
+        { "name": "Bắp cải trắng",            "qty": 150, "unit": "g"  }
+      ]
+    },
+
+    "nam_sang_s1_chuoi_trung_banh_mi_2lat": {
+      "id": "nam_sang_s1_chuoi_trung_banh_mi_2lat",
+      "name": "Chuối + Trứng ốp la (3q) + Bánh mì nguyên cám (2 lát)",
+      "gender": "nam",
+      "slot": "sang",
+      "macro": { "P": 22, "C": 44, "F": 15, "kcal": 395, "estimated": true },
+      "ingredients": [
+        { "name": "Chuối",             "qty": 80,  "unit": "g"  },
+        { "name": "Trứng gà",          "qty": 165, "unit": "g",  "note": "3 quả" },
+        { "name": "Bánh mì nguyên cám","qty": 60,  "unit": "g",  "note": "2 lát" }
+      ]
+    },
+
+    "nam_sang_s2_chuoi_heo_xao": {
+      "id": "nam_sang_s2_chuoi_heo_xao",
+      "name": "Chuối + Nạc heo xào cà chua",
+      "gender": "nam",
+      "slot": "sang",
+      "macro": { "P": 24, "C": 36, "F": 6, "kcal": 290, "estimated": true },
+      "ingredients": [
+        { "name": "Chuối",   "qty": 160, "unit": "g",  "note": "2 quả" },
+        { "name": "Nạc heo", "qty": 100, "unit": "g"  },
+        { "name": "Cà chua", "qty": 80,  "unit": "g"  },
+        { "name": "Dầu ăn",  "qty": 3,   "unit": "ml" }
+      ]
+    },
+
+    "nam_sang_s3_chuoi_trung_banh_mi_bo": {
+      "id": "nam_sang_s3_chuoi_trung_banh_mi_bo",
+      "name": "Chuối + Trứng luộc (1q) + Bánh mì phết bơ đậu phộng",
+      "gender": "nam",
+      "slot": "sang",
+      "macro": { "P": 14, "C": 30, "F": 9, "kcal": 255, "estimated": true },
+      "ingredients": [
+        { "name": "Chuối",              "qty": 80,  "unit": "g"  },
+        { "name": "Trứng gà",           "qty": 55,  "unit": "g",  "note": "1 quả" },
+        { "name": "Bánh mì nguyên cám", "qty": 30,  "unit": "g",  "note": "1 lát" },
+        { "name": "Bơ đậu phộng",       "qty": 10,  "unit": "g"  }
+      ]
+    },
+
+    "nam_sang_s4_chuoi_matcha": {
+      "id": "nam_sang_s4_chuoi_matcha",
+      "name": "Chuối + Trứng ốp la (3q) + Matcha sữa tươi",
+      "gender": "nam",
+      "slot": "sang",
+      "macro": { "P": 28, "C": 34, "F": 16, "kcal": 390, "estimated": true },
+      "ingredients": [
+        { "name": "Chuối",                  "qty": 80,  "unit": "g"  },
+        { "name": "Trứng gà",               "qty": 165, "unit": "g",  "note": "3 quả" },
+        { "name": "Sữa tươi không đường",   "qty": 200, "unit": "ml" },
+        { "name": "Bột matcha nguyên chất", "qty": 4,   "unit": "g"  }
+      ]
+    },
+
+    "nam_sang_s5_chuoi_heo_bam_banhmi": {
+      "id": "nam_sang_s5_chuoi_heo_bam_banhmi",
+      "name": "Chuối + Nạc heo băm + Bánh mì nguyên cám (2 lát)",
+      "gender": "nam",
+      "slot": "sang",
+      "macro": { "P": 26, "C": 42, "F": 6, "kcal": 325, "estimated": true },
+      "ingredients": [
+        { "name": "Chuối",              "qty": 80,  "unit": "g"  },
+        { "name": "Nạc heo băm",        "qty": 100, "unit": "g"  },
+        { "name": "Bánh mì nguyên cám", "qty": 60,  "unit": "g",  "note": "2 lát" }
+      ]
+    },
+
+    "nam_trua_t1_beefsteak_dau_bap": {
+      "id": "nam_trua_t1_beefsteak_dau_bap",
+      "name": "Beefsteak + Cơm 1.5 chén + Đậu bắp luộc",
+      "gender": "nam",
+      "slot": "trua",
+      "macro": { "P": 50, "C": 55, "F": 13, "kcal": 540, "estimated": true },
+      "ingredients": [
+        { "name": "Bò beefsteak (sirloin)", "qty": 200, "unit": "g"  },
+        { "name": "Cơm trắng",             "qty": 200, "unit": "g",  "note": "1.5 chén" },
+        { "name": "Đậu bắp",               "qty": 80,  "unit": "g"  }
+      ]
+    },
+
+    "nam_trua_t2_ga_ap_chao_dau_bap": {
+      "id": "nam_trua_t2_ga_ap_chao_dau_bap",
+      "name": "Ức gà áp chảo muối tiêu + Cơm + Đậu bắp",
+      "gender": "nam",
+      "slot": "trua",
+      "macro": { "P": 52, "C": 50, "F": 7, "kcal": 475, "estimated": true },
+      "ingredients": [
+        { "name": "Ức gà phi-lê",  "qty": 200, "unit": "g"  },
+        { "name": "Cơm trắng",     "qty": 200, "unit": "g",  "note": "1.5 chén" },
+        { "name": "Đậu bắp",       "qty": 70,  "unit": "g"  },
+        { "name": "Dầu ăn",        "qty": 5,   "unit": "ml" }
+      ]
+    },
+
+    "nam_trua_t3_heo_ap_chao_bi_do": {
+      "id": "nam_trua_t3_heo_ap_chao_bi_do",
+      "name": "Nạc heo áp chảo + Cơm + Bí đỏ/Cà rốt",
+      "gender": "nam",
+      "slot": "trua",
+      "macro": { "P": 46, "C": 50, "F": 10, "kcal": 475, "estimated": true },
+      "ingredients": [
+        { "name": "Nạc heo",    "qty": 200, "unit": "g"  },
+        { "name": "Cơm trắng", "qty": 200, "unit": "g",  "note": "1.5 chén" },
+        { "name": "Bí đỏ",     "qty": 50,  "unit": "g"  },
+        { "name": "Cà rốt",    "qty": 50,  "unit": "g"  },
+        { "name": "Dầu ăn",    "qty": 5,   "unit": "ml" }
+      ]
+    },
+
+    "nam_trua_t4_ga_luoc_xe_phay": {
+      "id": "nam_trua_t4_ga_luoc_xe_phay",
+      "name": "Ức gà luộc xé phay + Bắp cải + Cơm",
+      "gender": "nam",
+      "slot": "trua",
+      "macro": { "P": 50, "C": 48, "F": 4, "kcal": 430, "estimated": true },
+      "ingredients": [
+        { "name": "Ức gà phi-lê",    "qty": 200, "unit": "g"  },
+        { "name": "Bắp cải trắng",   "qty": 150, "unit": "g"  },
+        { "name": "Cơm trắng",       "qty": 200, "unit": "g",  "note": "1.5 chén" }
+      ]
+    },
+
+    "nam_trua_t5_beefsteak_salad_ca_chua": {
+      "id": "nam_trua_t5_beefsteak_salad_ca_chua",
+      "name": "Beefsteak + Cơm + Salad cà chua",
+      "gender": "nam",
+      "slot": "trua",
+      "macro": { "P": 50, "C": 54, "F": 13, "kcal": 535, "estimated": true },
+      "ingredients": [
+        { "name": "Bò beefsteak (sirloin)", "qty": 200, "unit": "g"  },
+        { "name": "Cơm trắng",             "qty": 200, "unit": "g",  "note": "1.5 chén" },
+        { "name": "Cà chua",               "qty": 80,  "unit": "g"  },
+        { "name": "Xà lách",               "qty": 30,  "unit": "g"  }
+      ]
+    },
+
+    "nam_trua_t6_heo_luoc_rau_lang": {
+      "id": "nam_trua_t6_heo_luoc_rau_lang",
+      "name": "Nạc heo luộc + Cơm + Rau lang luộc",
+      "gender": "nam",
+      "slot": "trua",
+      "macro": { "P": 44, "C": 46, "F": 6, "kcal": 415, "estimated": true },
+      "ingredients": [
+        { "name": "Nạc heo",   "qty": 200, "unit": "g"  },
+        { "name": "Cơm trắng", "qty": 200, "unit": "g",  "note": "1.5 chén" },
+        { "name": "Rau lang",  "qty": 100, "unit": "g"  }
+      ]
+    },
+
+    "nam_toi_d1_ga_xao_nam_ot_chuong": {
+      "id": "nam_toi_d1_ga_xao_nam_ot_chuong",
+      "name": "Ức gà xào nấm/ớt chuông + Cơm + Bông cải xanh",
+      "gender": "nam",
+      "slot": "toi",
+      "macro": { "P": 55, "C": 52, "F": 9, "kcal": 520, "estimated": true },
+      "ingredients": [
+        { "name": "Ức gà phi-lê",  "qty": 200, "unit": "g"  },
+        { "name": "Nấm tươi",      "qty": 100, "unit": "g"  },
+        { "name": "Ớt chuông",     "qty": 100, "unit": "g"  },
+        { "name": "Cơm trắng",     "qty": 200, "unit": "g",  "note": "1.5 chén" },
+        { "name": "Bông cải xanh", "qty": 50,  "unit": "g"  },
+        { "name": "Dầu ăn",        "qty": 5,   "unit": "ml" }
+      ]
+    },
+
+    "nam_toi_d2_heo_rang_xem_cai_ngot": {
+      "id": "nam_toi_d2_heo_rang_xem_cai_ngot",
+      "name": "Nạc heo rang xém cạnh + Cơm + Cải ngọt",
+      "gender": "nam",
+      "slot": "toi",
+      "macro": { "P": 46, "C": 48, "F": 10, "kcal": 470, "estimated": true },
+      "ingredients": [
+        { "name": "Nạc heo",    "qty": 200, "unit": "g"  },
+        { "name": "Cơm trắng", "qty": 200, "unit": "g",  "note": "1.5 chén" },
+        { "name": "Cải ngọt",  "qty": 100, "unit": "g"  },
+        { "name": "Dầu ăn",    "qty": 5,   "unit": "ml" }
+      ]
+    },
+
+    "nam_toi_d3_beefsteak_salad_xa_lach": {
+      "id": "nam_toi_d3_beefsteak_salad_xa_lach",
+      "name": "Beefsteak + Cơm + Salad xà lách",
+      "gender": "nam",
+      "slot": "toi",
+      "macro": { "P": 50, "C": 53, "F": 13, "kcal": 530, "estimated": true },
+      "ingredients": [
+        { "name": "Bò beefsteak (sirloin)", "qty": 200, "unit": "g"  },
+        { "name": "Cơm trắng",             "qty": 200, "unit": "g",  "note": "1.5 chén" },
+        { "name": "Xà lách",               "qty": 50,  "unit": "g"  },
+        { "name": "Cà chua",               "qty": 50,  "unit": "g"  }
+      ]
+    },
+
+    "nam_toi_d4_heo_xao_gia_he": {
+      "id": "nam_toi_d4_heo_xao_gia_he",
+      "name": "Nạc heo xào giá hẹ + Cơm",
+      "gender": "nam",
+      "slot": "toi",
+      "macro": { "P": 46, "C": 50, "F": 10, "kcal": 475, "estimated": true },
+      "ingredients": [
+        { "name": "Nạc heo",   "qty": 200, "unit": "g"  },
+        { "name": "Giá đỗ",    "qty": 100, "unit": "g"  },
+        { "name": "Hẹ",        "qty": 50,  "unit": "g"  },
+        { "name": "Cơm trắng", "qty": 200, "unit": "g",  "note": "1.5 chén" },
+        { "name": "Dầu ăn",    "qty": 5,   "unit": "ml" }
+      ]
+    },
+
+    "nam_toi_d5_ga_mat_ong_rau_muong": {
+      "id": "nam_toi_d5_ga_mat_ong_rau_muong",
+      "name": "Ức gà sốt mật ong + Cơm + Rau muống luộc",
+      "gender": "nam",
+      "slot": "toi",
+      "macro": { "P": 50, "C": 52, "F": 5, "kcal": 460, "estimated": true },
+      "ingredients": [
+        { "name": "Ức gà phi-lê",  "qty": 200, "unit": "g"  },
+        { "name": "Mật ong",       "qty": 7,   "unit": "g"  },
+        { "name": "Cơm trắng",     "qty": 200, "unit": "g",  "note": "1.5 chén" },
+        { "name": "Rau muống",     "qty": 100, "unit": "g"  }
+      ]
+    },
+
+    "nam_toi_d6_ga_chua_ngot_salad": {
+      "id": "nam_toi_d6_ga_chua_ngot_salad",
+      "name": "Ức gà xào chua ngọt + Cơm + Salad",
+      "gender": "nam",
+      "slot": "toi",
+      "macro": { "P": 50, "C": 50, "F": 8, "kcal": 470, "estimated": true },
+      "ingredients": [
+        { "name": "Ức gà phi-lê",     "qty": 200, "unit": "g"  },
+        { "name": "Ớt chuông",        "qty": 100, "unit": "g"  },
+        { "name": "Cơm trắng",        "qty": 200, "unit": "g",  "note": "1.5 chén" },
+        { "name": "Xà lách",          "qty": 50,  "unit": "g"  },
+        { "name": "Nước cốt chanh",   "qty": 10,  "unit": "ml" },
+        { "name": "Dầu ăn",           "qty": 5,   "unit": "ml" }
+      ]
+    }
+  },
+
+  "schedule": {
+    "T2": {
+      "nu":  { "sang": "nu_sang_s2_sua_chua_yen_mach", "trua": "nu_trua_t1_bo_phi_le_xao",    "toi": "nu_toi_d1_ga_mat_ong" },
+      "nam": { "sang": "nam_sang_s1_chuoi_trung_banh_mi_2lat", "trua": "nam_trua_t1_beefsteak_dau_bap", "toi": "nam_toi_d1_ga_xao_nam_ot_chuong" }
+    },
+    "T3": {
+      "nu":  { "sang": "nu_sang_s1_oat_banana_cacao",  "trua": "nu_trua_t2_bo_xao_thap_cam",  "toi": "nu_toi_d2_bo_ham_nuoc_dua" },
+      "nam": { "sang": "nam_sang_s2_chuoi_heo_xao",    "trua": "nam_trua_t2_ga_ap_chao_dau_bap", "toi": "nam_toi_d2_heo_rang_xem_cai_ngot" }
+    },
+    "T4": {
+      "nu":  { "sang": "nu_sang_s2_sua_chua_yen_mach", "trua": "nu_trua_t3_ca_hoi_com_lua",   "toi": "nu_toi_d2_bo_ham_nuoc_dua" },
+      "nam": { "sang": "nam_sang_s3_chuoi_trung_banh_mi_bo", "trua": "nam_trua_t3_heo_ap_chao_bi_do", "toi": "nam_toi_d3_beefsteak_salad_xa_lach" }
+    },
+    "T5": {
+      "nu":  { "sang": "nu_sang_s3_banh_mi_matcha",    "trua": "nu_trua_t4_cari_ga",           "toi": "nu_toi_d3_ga_takoyaki" },
+      "nam": { "sang": "nam_sang_s2_chuoi_heo_xao",    "trua": "nam_trua_t4_ga_luoc_xe_phay",  "toi": "nam_toi_d4_heo_xao_gia_he" }
+    },
+    "T6": {
+      "nu":  { "sang": "nu_sang_s1_oat_banana_cacao",  "trua": "nu_trua_t5_ga_khom_banh_mi",  "toi": "nu_toi_d3_ga_takoyaki" },
+      "nam": { "sang": "nam_sang_s4_chuoi_matcha",     "trua": "nam_trua_t5_beefsteak_salad_ca_chua", "toi": "nam_toi_d5_ga_mat_ong_rau_muong" }
+    },
+    "T7": {
+      "nu":  { "sang": "nu_sang_s3_banh_mi_matcha",    "trua": "nu_trua_t2_bo_xao_thap_cam",  "toi": "nu_toi_d1_ga_mat_ong" },
+      "nam": { "sang": "nam_sang_s5_chuoi_heo_bam_banhmi", "trua": "nam_trua_t6_heo_luoc_rau_lang", "toi": "nam_toi_d6_ga_chua_ngot_salad" }
+    }
+  }
+}
